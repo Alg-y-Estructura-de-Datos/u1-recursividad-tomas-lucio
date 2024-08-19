@@ -1,9 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int invertir(int n,int invertido = 0);
 
-    cout << "Examen Final Prog 3" << endl;
+int main()
+{
+    int numero;
+    cin >> numero;
+    cout << invertir(numero , 0);
+}
 
-    return 0;
+int invertir(int n , int invertido)
+{
+    if(n == 0) 
+    {
+        return invertido;
+    }
+    else
+    {
+        return invertir(n/10 ,invertido*10 + n % 10);
+    }
 }
